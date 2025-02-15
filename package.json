@@ -1,0 +1,37 @@
+{
+  "name": "sms-api-connect",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Ecibu Michael",
+  "license": "ISC",
+  "description": "This is a service to connect to SMS API",
+  "bin": {
+    "sms-api-connect": "app.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pkg": "^5.8.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "pkg": {
+    "assets": [],
+    "targets": [
+      "host"
+    ],
+    "outputPath": "pkg"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

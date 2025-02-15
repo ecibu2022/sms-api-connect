@@ -1,0 +1,20 @@
+<service>
+<id>sms-api-connect</id>
+<name>sms-api-connect</name>
+<description>sms-api-connect</description>
+<env name="EXE_SERVICE_APP_HOME" value="%BASE%"/>
+<env name="EXE_SERVICE_APP_APPDATA_PATH" value="%ALLUSERSPROFILE%\sms-api-connect\"/>
+<env name="EXE_SERVICE_APP_LOGS_PATH" value="%ALLUSERSPROFILE%\sms-api-connect\logs"/>
+<env name="EXE_SERVICE_APP_CONFIG_PATH" value="%ALLUSERSPROFILE%\sms-api-connect\config"/>
+<env name="EXE_SERVICE_APP_HTTP_PORT" value="8800"/>
+<env name="EXE_SERVICE_APP_HTTPS_PORT" value="9000"/>
+<env name="NODE_ENV" value="production"/>
+<executable>%BASE%\sms-api.exe</executable>
+<arguments>start</arguments>
+<logpath>%ALLUSERSPROFILE%\sms-api-connect\logs</logpath>
+<log mode="roll-by-size-time">
+<sizeThreshold>10240</sizeThreshold>
+<pattern>yyyyMMddHHmmss</pattern>
+<autoRollAtTime>00:00:00</autoRollAtTime>
+</log>
+</service>
