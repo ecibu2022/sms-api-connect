@@ -152,9 +152,11 @@ NB: Both the window service wrapper file name and xml file name should be the sa
 5. Run the generated installer `.exe` to install your app as a service on Windows.
 
 6. Go to the directory of ProgramData file created then open in command propt and type name of file.exe
+```bash
 C:\Program Files\sms-api-connect> sms-api.exe --config
 Enter the path for your API key file:
 Enter Url:
+```
 
 ---
 
@@ -179,29 +181,45 @@ Enter Url:
 1. While developing use __dirname to refer to the current working directory
 2. While in production (Packaging your app into executable) change path to write to C://PrigramData that is where Windows allows to write 
 We write to Program Data. Go here and create a folder
+```javascript
 const configFilePath = path.join("C:", "ProgramData", "sms-api-connect", "config", "config.txt");
+```
 
 ## Testing the API
 1. Using Postman
 Run the executable to start the service in executables folder
 
+![alt text](image-6.png)
+
 Go to directory where sms-api is installed in program files and run sms-api.exe --config in command prompt and close it
 
+```javascript
 // Check command line arguments
 if (process.argv.includes("--config")) {
   setupConfiguration();
 } else {
   startServer();
 }
+```
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
 
 Type http://localhost:8800 GET request to see config
+
 Then http://localhost:8800 POST to send SMS message
 
 2. In Business Central
 Check sms-api-bc extention and do the setup
 ![alt text](image.png)
+
 Then go to Send SMS page
 ![alt text](image-1.png)
+
+![alt text](image-7.png)
 
 Success!!!!!!!!!!!!!
 ---
